@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Un Regalo para Ángel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdf6f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #ffb347;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    .evento {
+      background: #fff8e7;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .bizum-info {
+      background: #fff;
+      padding: 1rem;
+      border: 2px dashed #ffb347;
+      border-radius: 10px;
+      text-align: center;
+    }
+    button {
+      background-color: #ffb347;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+      margin: 3rem 0 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Un Regalo para Ángel 🎁</h1>
+    <p>¡Ángel cumple 4 años y queremos celebrarlo contigo!</p>
+  </header>
+
+  <section>
+    <div class="evento">
+      <h2>🎉 Cumpleaños #4</h2>
+      <p>Ángel cumple 4 años este mes y estamos reuniendo regalitos para hacerle un día muy especial.</p>
+      <p><strong>Meta:</strong> 200€</p>
+      <p><strong>Fecha del evento:</strong> 3 de mayo de 2025</p>
+    </div>
+
+    <div class="bizum-info">
+      <h2>Cómo donar por Bizum</h2>
+      <p>Envía tu regalo usando Bizum al siguiente número:</p>
+      <p><strong>Número:</strong> <span id="numeroBizum">600 123 456</span></p>
+      <p><strong>Concepto:</strong> “Regalo Ángel”</p>
+      <button onclick="copiarNumero()">Copiar número Bizum</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Gracias por tu cariño 💖</h2>
+    <p>Tu regalo significa mucho para Ángel y su familia. ¡Gracias por compartir este momento con nosotros!</p>
+  </section>
+
+  <footer>
+    Sitio hecho con cariño para Ángel · 2025
+  </footer>
+
+  <script>
+    function copiarNumero() {
+      const numero = document.getElementById("numeroBizum").textContent.replace(/\s/g, "");
+      navigator.clipboard.writeText(numero).then(() => {
+        alert("Número copiado al portapapeles 📲");
+      });
+    }
+  </script>
+
+</body>
+</html>
